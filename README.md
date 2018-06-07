@@ -19,18 +19,30 @@ java -version
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
+After building audisp-kafka with maven - TODO
+Edit /etc/audisp/plugins.d/au-remote.conf, this files should looks like
 
 ```
-until finished
+active = yes
+direction = out
+path = /opt/a2/agents/audisp/audisp-kafka
+type = always
+format = string
+
+```
+Create Kafka's server topic for audit test with a single partition and only one replica: 
+
+```
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic audisp-test
+```
+
+Edit audisp-kafka.conf, this files should looks like
+
+```
+a2.worker.count = 32
+a2.kafka.servers = dwh.a2-solutions.eu:9092
+a2.kafka.topic = audisp-test
+a2.kafka.client.id = a2.audit.ai.linux
 ```
 
 End with an example of getting some data out of the system or using it for a little demo

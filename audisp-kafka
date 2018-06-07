@@ -1,0 +1,18 @@
+#!/bin/sh
+
+if type -p java; then
+    JAVA=java
+elif [[ -n "$JAVA_HOME" ]] && [[ -x "$JAVA_HOME/bin/java" ]];  then
+    JAVA="$JAVA_HOME/bin/java"
+else
+    echo "DID NOT FIND JAVA. EXITING!!!"
+    exit 1
+fi
+
+A2_AGENT_HOME=/opt/a2/agents/audisp
+
+$JAVA \
+    -cp $(for i in $A2_AGENT_HOME/lib/*.jar ; do echo -n $i: ; done)$A2_AGENT_HOME/audisp-kafka-0.0.1-SNAPSHOT.jar \
+    -Da2.log4j.configuration=$A2_AGENT_HOME/log4j.properties \
+    eu.solutions.a2.audit.linux.AudispKafka
+
