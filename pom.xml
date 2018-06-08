@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>eu.solutions.a2.audit</groupId>
   <artifactId>audisp-kafka</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.1.0</version>
   <packaging>jar</packaging>
   <name>audisp-kafka</name>
   <description>Linux audit event multiplexor (audisp) plugin for transferring event information to Apache Kafka</description>
@@ -48,6 +48,33 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>2.4</version>
+        <executions>
+          <execution>
+          	<phase>install</phase>
+          	<goals>
+          	  <goal>resources</goal>
+          	</goals>
+          	<configuration>
+          	  <outputDirectory>${project.build.directory}</outputDirectory>
+          	</configuration>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
+    <resources>
+      <resource>
+        <directory>${basedir}</directory>
+        <includes>
+          <include>audisp-kafka</include>
+          <include>audisp-kafka.conf</include>
+          <include>log4j.properties</include>
+          <include>README.md</include>
+        </includes>
+      </resource>
+    </resources>
   </build>
 </project>

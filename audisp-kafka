@@ -12,7 +12,7 @@ fi
 A2_AGENT_HOME=/opt/a2/agents/audisp
 
 $JAVA \
-    -cp $(for i in $A2_AGENT_HOME/lib/*.jar ; do echo -n $i: ; done)$A2_AGENT_HOME/audisp-kafka-0.0.1-SNAPSHOT.jar \
+    -cp $(for i in $A2_AGENT_HOME/lib/*.jar ; do echo -n $i: ; done)$A2_AGENT_HOME/audisp-kafka-0.1.0.jar \
     -Da2.log4j.configuration=$A2_AGENT_HOME/log4j.properties \
     eu.solutions.a2.audit.linux.AudispKafka
 

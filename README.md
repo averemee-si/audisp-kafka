@@ -1,4 +1,4 @@
-# Project Title
+# audisp-kafka
 
 Linux audit event multiplexor (audisp) plugin for transferring audit event information to [Apache Kafka](http://kafka.apache.org/)
 
