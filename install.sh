@@ -13,6 +13,7 @@ cp target/lib/lz4-java-1.4.jar $AUDISP_HOME/lib
 cp target/lib/slf4j-api-1.7.25.jar $AUDISP_HOME/lib
 cp target/lib/snappy-java-1.1.7.1.jar $AUDISP_HOME/lib
 
+cp target/audisp-kafka-0.1.0.jar $AUDISP_HOME
 cp audisp-kafka $AUDISP_HOME
 cp audisp-kafka.conf $AUDISP_HOME
 cp log4j.properties $AUDISP_HOME
