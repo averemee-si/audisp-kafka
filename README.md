@@ -109,7 +109,7 @@ Please size [Kafka](http://kafka.apache.org/)'s settings for production environm
 
 * [Maven](https://maven.apache.org/) - Dependency Management
 
-## Stateent of direction
+## Statement of direction
 Kerberos/SSL support
 
 ## Authors
@@ -120,8 +120,3 @@ Kerberos/SSL support
 
 This project is licensed under the Apache License - see the [LICENSE](LICENSE) file for details
 
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
