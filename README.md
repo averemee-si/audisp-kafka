@@ -109,7 +109,7 @@ Please size [Kafka](http://kafka.apache.org/)'s settings for production environm
 
 * [Maven](https://maven.apache.org/) - Dependency Management
 
-## Statement of direction
+## TODO
 Kerberos/SSL support
 
 ## Authors
